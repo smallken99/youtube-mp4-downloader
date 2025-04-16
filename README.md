@@ -35,8 +35,8 @@ sudo apt install -y git
 
 ```bash
 # 克隆專案
-git clone https://github.com/your-username/clip-dark-capture.git
-cd clip-dark-capture
+git clone https://github.com/your-username/youtube-mp4-downloader.git
+cd youtube-mp4-downloader
 ```
 
 ### 3. 設置後端
@@ -65,9 +65,9 @@ After=network.target
 
 [Service]
 User=your-username
-WorkingDirectory=/path/to/clip-dark-capture/server
-Environment="PATH=/path/to/clip-dark-capture/server/venv/bin"
-ExecStart=/path/to/clip-dark-capture/server/venv/bin/python app.py
+WorkingDirectory=/path/to/youtube-mp4-downloader/server
+Environment="PATH=/path/to/youtube-mp4-downloader/server/venv/bin"
+ExecStart=/path/to/youtube-mp4-downloader/server/venv/bin/python app.py
 Restart=always
 
 [Install]
@@ -112,7 +112,7 @@ server {
     listen 80;
     server_name your-domain.com;  # 替換為您的域名或 IP
 
-    root /path/to/clip-dark-capture/dist;
+    root /path/to/youtube-mp4-downloader/dist;
     index index.html;
 
     location / {
@@ -195,7 +195,7 @@ sudo tail -f /var/log/nginx/error.log
 3. 檢查權限：
 ```bash
 # 確保資料夾權限正確
-sudo chown -R your-username:your-username /path/to/clip-dark-capture
+sudo chown -R your-username:your-username /path/to/youtube-mp4-downloader
 ```
 
 ### 注意事項

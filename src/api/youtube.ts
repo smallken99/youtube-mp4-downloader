@@ -24,7 +24,7 @@ export const downloadVideo = async (
 ): Promise<Blob> => {
   try {
     const response = await axios.post(
-      'http://localhost:3001/api/download',
+      '/api/download',
       options,
       {
         responseType: 'blob',
